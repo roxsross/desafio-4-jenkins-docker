@@ -16,7 +16,6 @@ pipeline {
 		}
 		stage('check tools') {
 			steps {
-				echo("workspace directorio: ${WORKSPACE}")
 				sh "mvn -version"
 			}
 		}
