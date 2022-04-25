@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 pipeline {
 	agent any
 	environment {
@@ -37,7 +35,7 @@ pipeline {
 			}
 		}
 
-        stage('Build docker') {
+        stage('docker deploy') {
 			steps {
                 echo("Hago Docker Login")
                 sh 'docker login --username=$DOCKER_HUB_LOGIN_USR --password=$DOCKER_HUB_LOGIN_PSW'
